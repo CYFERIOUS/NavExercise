@@ -7,7 +7,8 @@
 <body>
 <main>
 
-<div id="menu"><div id="burguer"></div></div>
+<div id="menu"><div id="burguer" onClick="burguerMenu()"></div></div>
+<div class="sideMenu" id="sideMenu"></div>
 <div id="mainContainer" align="center">
 <div id="title">GET PAID FOR <br> GIVING A SHIT</div>
 </div>
@@ -46,6 +47,10 @@ function myFunction(arr) {
 	newdiv.innerHTML  = arr.items[i].label;
 	ni.appendChild(newdiv);
 }
+}
+
+function burguerMenu(){
+	document.getElementById("sideMenu").style.height = "400px";
 }
 
 </script>
