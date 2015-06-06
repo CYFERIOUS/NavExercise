@@ -5,6 +5,49 @@
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-<h1>Hello.</h1>
+<main>
+
+<div id="menu"><div id="burguer"></div></div>
+<div id="mainContainer" align="center">
+<div id="title">GET PAID FOR <br> GIVING A SHIT</div>
+</div>
+<div id="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</main>
+
 </body>
+
+<script type="text/javascript">
+var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost:8080/hello";
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var myArr = JSON.parse(xmlhttp.responseText);
+        myFunction(myArr);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+	console.log(arr.items[0].label);
+	console.log("long is" + arr.items.length);
+     
+  var ni = document.getElementById("menu");
+  
+ for(var i = 0; i < arr.items.length; i++) {
+	console.log("este que pasa"+arr.items[i].label); 
+	var newdiv = document.createElement('div');
+	var divIdName = 'my'+i+'Div';
+	newdiv.setAttribute('id',divIdName);
+	newdiv.setAttribute('class','menues');
+	newdiv.innerHTML  = arr.items[i].label;
+	ni.appendChild(newdiv);
+}
+}
+
+</script>
+
 </html>
