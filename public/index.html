@@ -41,6 +41,7 @@ function myFunction(arr) {
   var sideMenu = document.getElementById("sideMenu");
   
   var careersMenu = document.getElementById("careerMenu");
+  var mainContainer = document.getElementById("mainContainer");
   
 	for(var i = 0; i < arr.items[2].items.length; i++) {
 		console.log("carreras"+arr.items[2].items[i].label);
@@ -60,17 +61,23 @@ function myFunction(arr) {
 	newdiv.innerHTML  = "<li>"+arr.items[i].label+"</li>";
 	
 		newdiv.onmouseover = function(event){
+			
     		 var necesary = event.currentTarget.id;
 			 if(necesary == "my2Div"){
 			 document.getElementById("careerMenu").style.display="block";
 			 }
 		}
-		
 		newdiv.onclick = function(event){
-    		 var necesary = event.currentTarget.id;
-			 if(necesary == "my2Div"){
+		window.open("http://www.dgflute.com","_blank");
+		}
+		careersMenu.onclick = function(event){
+		window.open("http://www.dgflute.com","_blank");
+		}
+		
+		mainContainer.onclick = function(event){
+    	
 			 document.getElementById("careerMenu").style.display="none";
-			 }
+			 
 		}
 		
 		
