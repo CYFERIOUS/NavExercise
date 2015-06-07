@@ -57,7 +57,7 @@ I DONT USE ANY LIBRARY, JUST PURE JAVASCRIPT
 * On click, if item contains a URL, Primary Navigation navigates to a new page.ok
 * On click, if item contains other items, Secondary Navigation appears (see Desktop, Secondary Navigation).OK
 * Menu appears containing Secondary Navigation.OK
-* Translucent mask appears over content, behind menu.NO
+* Translucent mask appears over content, behind menu.ok
 * On hover in, Secondary Navigation changes color (magenta/light gray).OK
 * On click, Secondary navigates to a new page.ok
 * On click outside of menu, menu and mask are hidden.OK
