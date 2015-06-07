@@ -33,7 +33,6 @@ body, html {
 }
 #careerMenu{
 	font-family:secondary;
-	position:absolute;
 	z-index:2000;
 	width:9%;
 	height:100%;
@@ -53,6 +52,7 @@ body, html {
 	margin-right:24px;
 	cursor:pointer;
 }
+
 .menues:hover{
 	position:relative;
 	top:0px;
@@ -104,6 +104,13 @@ body, html {
 	and (min-device-width : 320px) 
 	and (max-device-width : 768px) {
 		
+#curtain{
+width:100%;
+height:100%;
+background-color:#000;
+opacity:0.5;
+display:none;	
+}
 #burguer{
 	left:0px;
 	width:70px;
@@ -121,15 +128,15 @@ body, html {
 }
 
 #menu{
-	padding-left:24px;
 	
+	
+	padding-left:24px;	
 }
 
 #sideMenu{
 	position:absolute;
 	z-index:2000;
 	display:none;
-	top:72px;
 	width:668px;
 	height:100%;
 	background-color:#FFF;
@@ -137,11 +144,14 @@ body, html {
 }
 .menues{
 	
-	z-index:2500;
+	top:72px;
 	float:none;
 	margin-left:24px;
 	color:#000;
+	visibility:hidden;
 }
+
+
 
 .menues li{
 	list-style-position: outside;
@@ -150,7 +160,7 @@ body, html {
 
 .menues:hover{
 	width:60%;
-	top:0px;
+	top:72px;
 	background-color:#EEE;
 	color:#000;
 	cursor:pointer;
@@ -194,7 +204,13 @@ body, html {
 @media only screen 
 	and (min-device-width : 0px) 
 	and (max-device-width : 320px) {
-
+#curtain{
+width:100%;
+height:100%;
+background-color:#000;
+opacity:0.5;
+display:none;
+}
 #burguer{
 	left:0px;
 	width:60px;
@@ -216,15 +232,17 @@ body, html {
 }
 .menues{
 	
-	z-index:2500;
+	top:72px;
 	float:none;
 	margin-left:24px;
 	color:#000;
+	visibility:hidden;
+
 }
 
 .menues:hover{
 	width:60%;
-	top:0px;
+	top:72px;
 	background-color:#EEE;
 	color:#000;
 	cursor:pointer;
@@ -234,7 +252,6 @@ body, html {
 	position:absolute;
 	z-index:2000;
 	display:none;
-	top:72px;
 	width:50%;
 	height:100%;
 	background-color:#FFF;

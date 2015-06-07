@@ -10,6 +10,7 @@
 <div id="menu"><div id="burguer" onClick="burguerMenu()"></div></div>
 <div class="sideMenu" id="sideMenu"></div>
 <div id="careerMenu"></div>
+<div id="curtain"></div>
 <div id="mainContainer" align="center">
 <div id="title">GET PAID FOR <br> GIVING A SHIT</div>
 </div>
@@ -39,6 +40,8 @@ function myFunction(arr) {
      
   var mainMenu = document.getElementById("menu");
   var sideMenu = document.getElementById("sideMenu");
+  
+  var burguerMenu = document.getElementById("burguer");
   
   var careersMenu = document.getElementById("careerMenu");
   var mainContainer = document.getElementById("mainContainer");
@@ -80,15 +83,24 @@ function myFunction(arr) {
 			 
 		}
 		
+		burguerMenu.onclick = function(event){
+			
+				sideMenu.appendChild(mainMenu);
+				var i, tags = document.getElementById("sideMenu").getElementsByTagName("*"), total = tags.length;
+				for ( i = 0; i < total; i++ ) {
+  					tags[i].style.visibility= 'visible';
+				}
+				
+			document.getElementById("sideMenu").style.display="block";
+		}
 		
-	sideMenu.appendChild(newdiv);
+		
+	
 	mainMenu.appendChild(newdiv);
 }
 }
 
-function burguerMenu(){
-	document.getElementById("sideMenu").style.display = "block";	
-}
+
 
 
 </script>
