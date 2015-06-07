@@ -9,6 +9,11 @@ body, html {
     font-family: shitFont;
     src: url(../fonts/huge_agb_v5-webfont.woff);	
 }
+
+@font-face {
+    font-family: secondary;
+    src:url(../fonts/GalaxieCopernicus-Book.woff);	
+}
 #title{
 	position:relative;
 	top:30%;
@@ -27,17 +32,18 @@ body, html {
 	color:#FFF;
 }
 #careerMenu{
-	width:90px;
+	font-family:secondary;
+	position:absolute;
+	z-index:2000;
+	width:10%;
 	height:100%;
-	display:none;	
+	display:none;
+	left:370px;
+	background-color:#FFF;
 }
-
-div #my2Div:active + #careerMenu{
-	display:block;
-	background-color:#FFF;		
+#careerMenu li{
+	background-color:#FFF;
 }
-
-
 .menues{
 	position:relative;
 	top:16px;
@@ -107,6 +113,13 @@ div #my2Div:active + #careerMenu{
 	visibility:visible;
 	cursor:pointer;
 }
+
+#burguer:active{
+	
+	background:url(../images/toggle-close.svg) no-repeat center center;
+	
+}
+
 #menu{
 	padding-left:24px;
 	
@@ -191,6 +204,12 @@ div #my2Div:active + #careerMenu{
 	visibility:visible;	
 	cursor:pointer;
 }
+#burguer:active{
+	
+	background:url(../images/toggle-close.svg) no-repeat center center;
+	
+}
+
 
 #menu{
 	padding-left:24px;

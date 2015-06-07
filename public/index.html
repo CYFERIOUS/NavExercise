@@ -59,13 +59,25 @@ function myFunction(arr) {
 	newdiv.setAttribute('class','menues');
 	newdiv.innerHTML  = "<li>"+arr.items[i].label+"</li>";
 	
+		newdiv.onmouseover = function(event){
+    		 var necesary = event.currentTarget.id;
+			 if(necesary == "my2Div"){
+			 document.getElementById("careerMenu").style.display="block";
+			 }
+		}
+		
+		newdiv.onclick = function(event){
+    		 var necesary = event.currentTarget.id;
+			 if(necesary == "my2Div"){
+			 document.getElementById("careerMenu").style.display="none";
+			 }
+		}
+		
+		
 	sideMenu.appendChild(newdiv);
 	mainMenu.appendChild(newdiv);
 }
-
 }
-
-
 
 function burguerMenu(){
 	document.getElementById("sideMenu").style.display = "block";	
