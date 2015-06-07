@@ -1,5 +1,7 @@
 @import "fonts.css";
-body {
+body, html {
+	width:100%;
+	height:100%;
 	margin:0;
 }
 
@@ -24,6 +26,18 @@ body {
 	font-size:21px;
 	color:#FFF;
 }
+#careerMenu{
+	width:90px;
+	height:100%;
+	display:none;	
+}
+
+div #my2Div:active + #careerMenu{
+	display:block;
+	background-color:#FFF;		
+}
+
+
 .menues{
 	position:relative;
 	top:16px;
@@ -39,6 +53,10 @@ body {
 	background-color:#FFF;
 	color:#ec008c;
 	cursor:pointer;
+}
+.menues li{
+	list-style-position: outside;
+	list-style-type:none;
 }
 
 #mainContainer{
@@ -66,13 +84,14 @@ body {
 }
 
 #burguer{
-	background:url(../images/burguer.png)  no-repeat center center;
+	background:url(../images/toggle-open.svg)  no-repeat center center;
 	background-size:cover;
 	visibility:hidden;	
 }
 .sideMenu{
 
-	visibility:hidden;
+	display:none;
+
 }
 
 @media only screen 
@@ -83,7 +102,7 @@ body {
 	left:0px;
 	width:70px;
 	height:72px;
-	background:url(../images/burguer.png) no-repeat center center;
+	background:url(../images/toggle-open.svg) no-repeat center center;
 	background-size:cover;
 	visibility:visible;
 	cursor:pointer;
@@ -94,18 +113,38 @@ body {
 }
 
 #sideMenu{
-	visibility:hidden;
-	top:0px;
-	width:80px;
+	position:absolute;
+	z-index:2000;
+	display:none;
+	top:72px;
+	width:668px;
+	height:100%;
 	background-color:#FFF;
 
 }
 .menues{
+	
+	z-index:2500;
+	float:none;
 	margin-left:24px;
-	visibility:hidden;	
+	color:#000;
+}
+
+.menues li{
+	list-style-position: outside;
+	list-style-image:url(../images/downArrow.png);
+}
+
+.menues:hover{
+	width:60%;
+	top:0px;
+	background-color:#EEE;
+	color:#000;
+	cursor:pointer;
 }
 
 #mainContainer{
+	
 	width:100%;
 	height:300px;
 	background:url(../images/background-image.jpg) no-repeat center center ;
@@ -157,18 +196,33 @@ body {
 	padding-left:24px;
 }
 .menues{
-	visibility:hidden;	
+	
+	z-index:2500;
+	float:none;
+	margin-left:24px;
+	color:#000;
+}
+
+.menues:hover{
+	width:60%;
+	top:0px;
+	background-color:#EEE;
+	color:#000;
+	cursor:pointer;
 }
 
 #sideMenu{
-	
-	visibility:hidden;
-	top:0px;
-	width:80px;
+	position:absolute;
+	z-index:2000;
+	display:none;
+	top:72px;
+	width:50%;
+	height:100%;
 	background-color:#FFF;
 }
 
 #mainContainer{
+
 	width:340px;
 	height:300px;
 	background:url(../images/background-image.jpg) no-repeat center center ;

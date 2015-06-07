@@ -9,6 +9,7 @@
 
 <div id="menu"><div id="burguer" onClick="burguerMenu()"></div></div>
 <div class="sideMenu" id="sideMenu"></div>
+<div id="careerMenu"></div>
 <div id="mainContainer" align="center">
 <div id="title">GET PAID FOR <br> GIVING A SHIT</div>
 </div>
@@ -36,7 +37,19 @@ function myFunction(arr) {
 	console.log(arr.items[0].label);
 	console.log("long is" + arr.items.length);
      
-  var ni = document.getElementById("menu");
+  var mainMenu = document.getElementById("menu");
+  var sideMenu = document.getElementById("sideMenu");
+  
+  var careersMenu = document.getElementById("careerMenu");
+  
+	for(var i = 0; i < arr.items[2].items.length; i++) {
+		console.log("carreras"+arr.items[2].items[i].label);
+		var careerDiv = document.createElement('div');
+		careerDiv.setAttribute('class','menues');
+		careerDiv.innerHTML  = "<li>"+arr.items[2].items[i].label+"</li>";
+		careersMenu.appendChild(careerDiv);
+	}
+
   
  for(var i = 0; i < arr.items.length; i++) {
 	console.log("este que pasa"+arr.items[i].label); 
@@ -44,14 +57,20 @@ function myFunction(arr) {
 	var divIdName = 'my'+i+'Div';
 	newdiv.setAttribute('id',divIdName);
 	newdiv.setAttribute('class','menues');
-	newdiv.innerHTML  = arr.items[i].label;
-	ni.appendChild(newdiv);
-}
+	newdiv.innerHTML  = "<li>"+arr.items[i].label+"</li>";
+	
+	sideMenu.appendChild(newdiv);
+	mainMenu.appendChild(newdiv);
 }
 
-function burguerMenu(){
-	document.getElementById("sideMenu").style.height = "400px";
 }
+
+
+
+function burguerMenu(){
+	document.getElementById("sideMenu").style.display = "block";	
+}
+
 
 </script>
 
