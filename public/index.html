@@ -46,6 +46,8 @@ function myFunction(arr) {
   var careersMenu = document.getElementById("careerMenu");
   var mainContainer = document.getElementById("mainContainer");
   
+   var curtain = document.getElementById("curtain");
+  
 	for(var i = 0; i < arr.items[2].items.length; i++) {
 		console.log("carreras"+arr.items[2].items[i].label);
 		var careerDiv = document.createElement('div');
@@ -68,6 +70,7 @@ function myFunction(arr) {
     		 var necesary = event.currentTarget.id;
 			 if(necesary == "my2Div"){
 			 document.getElementById("careerMenu").style.display="block";
+			 document.getElementById("curtain").style.display="block";
 			 }
 		}
 		newdiv.onclick = function(event){
@@ -77,10 +80,10 @@ function myFunction(arr) {
 		window.open("http://www.dgflute.com","_blank");
 		}
 		
-		mainContainer.onclick = function(event){
+		curtain.onclick = function(event){
     	
 			 document.getElementById("careerMenu").style.display="none";
-			 
+			  document.getElementById("curtain").style.display="none";
 		}
 		
 		burguerMenu.onclick = function(event){
@@ -92,6 +95,7 @@ function myFunction(arr) {
 				}
 				document.getElementById("sideMenu").style.display="block";
 				document.getElementById("burguer").style.backgroundImage= "url(../images/toggle-close.svg)";
+				document.getElementById("curtain").style.display="block";
 		}
 	
 		
