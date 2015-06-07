@@ -7,7 +7,7 @@
 <body>
 <main>
 
-<div id="menu"><div id="burguer" onClick="burguerMenu()"></div></div>
+<div id="menu"><div id="burguer"></div></div>
 <div class="sideMenu" id="sideMenu"></div>
 <div id="careerMenu"></div>
 <div id="curtain"></div>
@@ -90,9 +90,10 @@ function myFunction(arr) {
 				for ( i = 0; i < total; i++ ) {
   					tags[i].style.visibility= 'visible';
 				}
-				
-			document.getElementById("sideMenu").style.display="block";
+				document.getElementById("sideMenu").style.display="block";
+				document.getElementById("burguer").style.backgroundImage= "url(../images/toggle-close.svg)";
 		}
+	
 		
 		
 	
