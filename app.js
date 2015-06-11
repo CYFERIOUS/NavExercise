@@ -1,14 +1,10 @@
+app.use(express.static(path.join(__dirname, 'public')));
 var jsonObj = require("./data/nav.json");
 var express = require('express');
 var logger = require('morgan');
 var path = require('path');
 var api = require('./api');
 var app = express();
-
-app.use(logger('dev'));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/api', api);
-
 var way = jsonObj;
 
 
@@ -21,6 +17,7 @@ var server = http.createServer(function(request, response) {
   response.end();
 });
 server.listen(8080);
+
 module.exports = app;
 
 

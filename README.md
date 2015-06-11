@@ -74,7 +74,7 @@ I DONT USE ANY LIBRARY, JUST PURE JAVASCRIPT
 * When a user clicks a Primary Navigation menu item, the Secondary Navigation should “push” down, the chevron should rotate NO 180°.
 * When a user hovers a Secondary Navigation item, it should change color (magenta/light gray).OK
 * When a user clicks a Secondary Navigation item, browser should navigate to a new page.NO
-* When a user clicks outside of the navigation, the navigation should close.NO
+* When a user clicks outside of the navigation, the navigation should close.OK
 * When the navigation closes:NO
   * the menu should “pull” from right to left
   * the logo and toggle button should “slide” from right to left
