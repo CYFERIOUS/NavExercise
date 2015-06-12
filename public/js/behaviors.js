@@ -3,6 +3,7 @@
 	var careersMenu = document.getElementById("careerMenu");
 	
 	var mainMenu = document.getElementById("menu");
+	var auxMenu = document.getElementById("auxMenu");
 	var sideMenu = document.getElementById("sideMenu");
   
 	var burguerMenu = document.getElementById("burguer");
@@ -13,14 +14,13 @@ var builderModule = {
  	// build main menu
 	buildMainMenu: function (data) {
 		for(var i = 0; i < data.items.length; i++) {
-		console.log("este que pasa"+data.items[i].label); 
 		var newdiv = document.createElement('div');
 		var divIdName = 'my'+i+'Div';
 		newdiv.setAttribute('id',divIdName);
 		newdiv.setAttribute('class','menues');
 		newdiv.innerHTML  = "<li>"+data.items[i].label+"</li>";
-		
 		mainMenu.appendChild(newdiv);
+
 		newdiv.onmouseover = function(event){
 				
 			var necesary = event.currentTarget.id;
@@ -57,8 +57,8 @@ var builderModule = {
 	}  
   },
   
-  toogle:function(element, className){ 	
-		
+  toogle:function(element, className,data){ 	
+	
     if (!element || !className){
         return;
     }
@@ -71,22 +71,30 @@ var builderModule = {
         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
 		document.getElementById("curtain").style.display="none";
 		
-		
     }
-	 sideMenu.appendChild(mainMenu);
-			  var i, tags = document.getElementById("sideMenu").getElementsByTagName("*"), total = tags.length;
-			  for ( i = 0; i < total; i++ ) {
-				  tags[i].style.visibility= 'visible';
-			  }
+		for(var i = 0; i < data.items.length; i++) {
+		var newdiv = document.createElement('div');
+		var divIdName = 'my'+i+'Div';
+		newdiv.setAttribute('id',divIdName);
+		newdiv.setAttribute('class','menues');
+		newdiv.innerHTML  = "<li>"+data.items[i].label+"</li>";
+		sideMenu.appendChild(newdiv);
+		}
+		
+		var i, tags = document.getElementById("sideMenu").getElementsByTagName("*"), total = tags.length;
+		for ( i = 0; i < total; i++ ) {
+			tags[i].style.visibility= 'visible';
+		}
     element.className = classString;
 			
   },
   
-  burguerMenuBehaviors:function(){
+  burguerMenuBehaviors:function(data){
 		burguerMenu.onclick = function(event){
 
-			builderModule.toogle(document.getElementById('sideMenu'),"sideMenuActive");
-			builderModule.toogle(document.getElementById('burguer'),"burguerActive");
+			builderModule.toogle(document.getElementById('sideMenu'),"sideMenuActive",data);
+			builderModule.toogle(document.getElementById('burguer'),"burguerActive",data);
+			
 		
 	}  
 	 

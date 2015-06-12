@@ -6,6 +6,7 @@ xmlhttp.onreadystatechange = function() {
         var myArr = JSON.parse(xmlhttp.responseText);
 		builderModule.buildMainMenu(myArr);
 		builderModule.buildSecondaryMenu(myArr);
+		builderModule.burguerMenuBehaviors(myArr);
     }
 }
 xmlhttp.open("GET", url, true);
