@@ -89,7 +89,7 @@ body, html {
 	margin-left:-484px;
 }
 
-#burguer{
+#logo{
 	width:10%;
 	height:100%;
 	background:url(../images/HUGE-white.png)  no-repeat center center;
@@ -123,7 +123,7 @@ background-color:#000;
 opacity:0.5;
 display:none;	
 }
-#burguer{
+.burguer{
 	left:0px;
 	width:70px;
 	height:72px;
@@ -133,7 +133,7 @@ display:none;
 	cursor:pointer;
 }
 
-#burguer:active{
+.burguerActive{
 	
 	background:url(../images/toggle-close.svg) no-repeat center center;
 	
@@ -145,10 +145,20 @@ display:none;
 	padding-left:24px;	
 }
 
-#sideMenu{
+.sideMenu{
 	position:absolute;
 	z-index:2000;
 	display:none;
+	width:668px;
+	height:100%;
+	background-color:#FFF;
+
+}
+
+.sideMenuActive{
+	position:absolute;
+	z-index:2000;
+	display:block;
 	width:668px;
 	height:100%;
 	background-color:#FFF;
@@ -225,7 +235,7 @@ background-color:#000;
 opacity:0.5;
 display:none;
 }
-#burguer{
+.burguer{
 	position:relative;
 	top:10px;
 	left:0px;
@@ -236,7 +246,8 @@ display:none;
 	visibility:visible;	
 	cursor:pointer;
 }
-#burguer:active{
+
+.burguerActive{
 	
 	background:url(../images/toggle-close.svg) no-repeat center center;
 	
@@ -264,7 +275,7 @@ display:none;
 	cursor:pointer;
 }
 
-#sideMenu{
+.sideMenu{
 	position:absolute;
 	z-index:2000;
 	display:none;
@@ -273,6 +284,15 @@ display:none;
 	background-color:#FFF;
 }
 
+.sideMenuActive{
+	position:absolute;
+	z-index:2000;
+	display:block;
+	width:668px;
+	height:100%;
+	background-color:#FFF;
+
+}
 #mainContainer{
 
 	width:340px;

@@ -57,17 +57,39 @@ var builderModule = {
 	}  
   },
   
+  toogle:function(element, className){ 	
+		
+    if (!element || !className){
+        return;
+    }
+    var classString = element.className, nameIndex = classString.indexOf(className);
+    if (nameIndex == -1) {
+        classString += ' ' + className;
+		document.getElementById("curtain").style.display="block";
+    }
+    else {
+        classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+		document.getElementById("curtain").style.display="none";
+		
+		
+    }
+	 sideMenu.appendChild(mainMenu);
+			  var i, tags = document.getElementById("sideMenu").getElementsByTagName("*"), total = tags.length;
+			  for ( i = 0; i < total; i++ ) {
+				  tags[i].style.visibility= 'visible';
+			  }
+    element.className = classString;
+			
+  },
+  
   burguerMenuBehaviors:function(){
 		burguerMenu.onclick = function(event){
-		sideMenu.appendChild(mainMenu);
-		var i, tags = document.getElementById("sideMenu").getElementsByTagName("*"), total = tags.length;
-		for ( i = 0; i < total; i++ ) {
-  			tags[i].style.visibility= 'visible';
-		}
-		document.getElementById("sideMenu").style.display="block";
-		document.getElementById("burguer").style.backgroundImage= "url(../images/toggle-close.svg)";
-		document.getElementById("curtain").style.display="block";
+
+			builderModule.toogle(document.getElementById('sideMenu'),"sideMenuActive");
+			builderModule.toogle(document.getElementById('burguer'),"burguerActive");
+		
 	}  
+	 
   },
  
  consoleLogs:function(){
