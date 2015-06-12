@@ -1,17 +1,11 @@
-var sass = require('node-sass');
-sass.render({
-  file: 'public/stylesheets/proof.scss',
-  data: 'body{background:blue; a{color:black;}}',
-  importer: function(url, prev, done) {
-    // url is the path in import as is, which libsass encountered. 
-    // prev is the previously resolved path. 
-    // done is an optional callback, either consume it or return value synchronously. 
-    // this.options contains this options hash, this.callback contains the node-style callback 
-    someAsyncFunction(url, prev, function(result){
-      done({
-        file: result.path, // only one of them is required, see section Sepcial Behaviours. 
-        contents: result.data
-      });
+var less = require('less');
+
+less.render('.class { width: (1 + 1) }',
+    {
+      paths: ['.', './lib'],  // Specify search paths for @import directives
+      filename: 'style.less', // Specify a filename, for better error messages
+      compress: true          // Minify CSS output
+    },
+    function (e, output) {
+       console.log(output.css);
     });
-  }
-});
