@@ -37,7 +37,6 @@ var builderModule = {
   // build secondary menu
 	buildSecondaryMenu: function (data) {
 		for(var i = 0; i < data.items[2].items.length; i++) {
-			console.log("carreras"+data.items[2].items[i].label);
 			var careerDiv = document.createElement('div');
 			careerDiv.setAttribute('class','menues');
 			careerDiv.innerHTML  = "<li>"+data.items[2].items[i].label+"</li>";
@@ -57,7 +56,7 @@ var builderModule = {
 	}  
   },
   
-  toogle:function(element, className,data){ 	
+  toogle:function(element, className){ 	
 	
     if (!element || !className){
         return;
@@ -72,38 +71,31 @@ var builderModule = {
 		document.getElementById("curtain").style.display="none";
 		
     }
-		for(var i = 0; i < data.items.length; i++) {
-		var newdiv = document.createElement('div');
-		var divIdName = 'my'+i+'Div';
-		newdiv.setAttribute('id',divIdName);
-		newdiv.setAttribute('class','menues');
-		newdiv.innerHTML  = "<li>"+data.items[i].label+"</li>";
-		sideMenu.appendChild(newdiv);
-		}
+	
+	
 		
-		var i, tags = document.getElementById("sideMenu").getElementsByTagName("*"), total = tags.length;
-		for ( i = 0; i < total; i++ ) {
-			tags[i].style.visibility= 'visible';
-		}
+		
     element.className = classString;
-			
+	return;
   },
   
   burguerMenuBehaviors:function(data){
+	  
+	  for(var i = 0; i < data.items.length; i++) {
+		var sideDiv = document.createElement('div');
+		sideDiv.setAttribute('class','menues');
+		sideDiv.innerHTML  = "<li>"+data.items[i].label+"</li>";
+		sideMenu.appendChild(sideDiv);
+		sideDiv.style.visibility= 'visible';
+	}
 		burguerMenu.onclick = function(event){
 
-			builderModule.toogle(document.getElementById('sideMenu'),"sideMenuActive",data);
-			builderModule.toogle(document.getElementById('burguer'),"burguerActive",data);
-			
-		
-	}  
-	 
+			builderModule.toogle(document.getElementById('sideMenu'),"sideMenuActive");
+			builderModule.toogle(document.getElementById('burguer'),"burguerActive");
+		}  
   },
  
- consoleLogs:function(){
-	console.log(arr.items[0].label);
-	console.log("long is" + arr.items.length);	 
- },
+ 
 };
 
 builderModule.callUrl();
