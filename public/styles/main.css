@@ -123,6 +123,23 @@ background-color:#000;
 opacity:0.5;
 display:none;	
 }
+
+.subCareer{
+	position:relative;
+	top:200px;
+	background-color:#F00;
+	visibility:hidden;
+	width:300px;
+	height:auto;
+	z-index:3000;
+}
+
+.showSubCareer{
+	
+	visibility:visible;
+	
+}
+
 .burguer{
 	left:0px;
 	width:70px;
@@ -134,14 +151,10 @@ display:none;
 }
 
 .burguerActive{
-	
 	background:url(../images/toggle-close.svg) no-repeat center center;
-	
 }
 
 #menu{
-	
-	
 	padding-left:24px;	
 }
 
@@ -152,7 +165,6 @@ display:none;
 	width:668px;
 	height:100%;
 	background-color:#FFF;
-
 }
 
 .sideMenuActive{
@@ -162,7 +174,6 @@ display:none;
 	width:668px;
 	height:100%;
 	background-color:#FFF;
-
 }
 .menues{
 	

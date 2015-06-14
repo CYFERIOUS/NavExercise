@@ -49,13 +49,14 @@ var builderModule = {
 		window.open("http://www.dgflute.com","_blank");
 	}
   },
+  //curtain behavior
   curtainAppears:function(){
 	curtain.onclick = function(event){
 		document.getElementById("careerMenu").style.display="none";
 		document.getElementById("curtain").style.display="none";	
 	}  
   },
-  
+  //mobile menu toogle
   toogle:function(element, className){ 	
 	
     if (!element || !className){
@@ -69,33 +70,47 @@ var builderModule = {
     else {
         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
 		document.getElementById("curtain").style.display="none";
-		
     }
-	
-	
-		
-		
+
     element.className = classString;
 	return;
   },
-  
+  //mobile menu creation
   burguerMenuBehaviors:function(data){
-	  
-	  for(var i = 0; i < data.items.length; i++) {
-		var sideDiv = document.createElement('div');
-		sideDiv.setAttribute('class','menues');
-		sideDiv.innerHTML  = "<li>"+data.items[i].label+"</li>";
-		sideMenu.appendChild(sideDiv);
-		sideDiv.style.visibility= 'visible';
-	}
+	  	
+		for(var i = 0; i < data.items.length; i++) {
+			var sideDiv = document.createElement('div');
+			var sideIdName = 'my'+i+'sideDiv';
+			sideDiv.setAttribute('id',sideIdName);
+			sideDiv.setAttribute('class','menues');
+			sideDiv.innerHTML  = "<li>"+data.items[i].label+"</li>";
+			sideMenu.appendChild(sideDiv);
+			sideDiv.style.visibility= 'visible';
+			
+			sideDiv.onclick = function(event){
+				var subitems = event.currentTarget.id;
+				if(subitems == "my2sideDiv"){
+					builderModule.toogle(document.getElementById('submenu'),"showSubCareer");
+				}
+			}
+		}
+		
+		for(var i = 0; i < data.items[2].items.length; i++) {
+			var carDivSide = document.createElement('div');
+			carDivSide.setAttribute('id',"submenu");
+			carDivSide.setAttribute('class','subCareer');
+			carDivSide.innerHTML  = "<li>"+data.items[2].items[i].label+"</li>";
+			sideDiv.appendChild(carDivSide);
+		}
+		
+			
+		
 		burguerMenu.onclick = function(event){
 
 			builderModule.toogle(document.getElementById('sideMenu'),"sideMenuActive");
 			builderModule.toogle(document.getElementById('burguer'),"burguerActive");
 		}  
   },
- 
- 
 };
 
 builderModule.callUrl();
