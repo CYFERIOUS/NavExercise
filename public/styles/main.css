@@ -131,11 +131,11 @@ display:none;
 .showSubCareer{
 	visibility:visible;
 	position:relative;
-	top:0px;
+	top:-300px;
 	background-color:#FFF;
 	width:100%;
 	height:auto;
-	z-index:3000;
+	z-index:7000;
 }
 
 .showSubCareer:hover{
@@ -162,11 +162,11 @@ display:none;
 
 .sideMenu{
 	position:absolute;
-	z-index:2000;
 	display:none;
 	width:668px;
 	height:100%;
 	background-color:#FFF;
+	z-index:2000;
 }
 
 .sideMenuActive{
@@ -184,6 +184,7 @@ display:none;
 	margin-left:24px;
 	color:#000;
 	visibility:hidden;
+	
 }
 
 
