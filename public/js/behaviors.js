@@ -90,14 +90,17 @@ var builderModule = {
 			sideDiv.onclick = function(event){
 				var subitems = event.currentTarget.id;
 				if(subitems == "my2sideDiv"){
-					builderModule.toogle(document.getElementById('submenu'),"showSubCareer");
+					for(var i = 0; i < data.items[2].items.length; i++) {
+						builderModule.toogle(document.getElementById('my'+i+'carDiv'),"showSubCareer");
+					}
 				}
 			}
 		}
 		
 		for(var i = 0; i < data.items[2].items.length; i++) {
 			var carDivSide = document.createElement('div');
-			carDivSide.setAttribute('id',"submenu");
+			var carDivName = 'my'+i+'carDiv';
+			carDivSide.setAttribute('id',carDivName);
 			carDivSide.setAttribute('class','subCareer');
 			carDivSide.innerHTML  = "<li>"+data.items[2].items[i].label+"</li>";
 			sideDiv.appendChild(carDivSide);

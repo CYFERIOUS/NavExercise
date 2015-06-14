@@ -125,19 +125,21 @@ display:none;
 }
 
 .subCareer{
-	position:relative;
-	top:200px;
-	background-color:#F00;
 	visibility:hidden;
+}
+
+.showSubCareer{
+	visibility:visible;
+	position:relative;
+	top:0px;
+	background-color:#FFF;
 	width:300px;
 	height:auto;
 	z-index:3000;
 }
 
-.showSubCareer{
-	
-	visibility:visible;
-	
+.showSubCareer:hover{
+	background-color:#CCC;
 }
 
 .burguer{
