@@ -103,7 +103,7 @@ var builderModule = {
 			carDivSide.setAttribute('id',carDivName);
 			carDivSide.setAttribute('class','subCareer');
 			carDivSide.innerHTML  = "<li>"+data.items[2].items[i].label+"</li>";
-			sideDiv.appendChild(carDivSide);
+			sideMenu.appendChild(carDivSide);
 		}
 		
 			

@@ -133,7 +133,7 @@ display:none;
 	position:relative;
 	top:0px;
 	background-color:#FFF;
-	width:300px;
+	width:100%;
 	height:auto;
 	z-index:3000;
 }
@@ -189,12 +189,18 @@ display:none;
 
 
 .menues li{
-	list-style-position: outside;
-	list-style-image:url(../images/downArrow.png);
+	background: url(../images/downArrow.png) no-repeat right top;
+	/* reset styles (optional): */
+	list-style: none;
+	margin: 0;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	padding-left: 10px;
 }
 
 .menues:hover{
-	width:60%;
+	width:93%;
 	top:72px;
 	background-color:#EEE;
 	color:#000;
