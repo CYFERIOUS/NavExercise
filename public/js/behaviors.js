@@ -92,6 +92,7 @@ var builderModule = {
 				if(subitems == "my2sideDiv"){
 					for(var i = 0; i < data.items[2].items.length; i++) {
 						builderModule.toogle(document.getElementById('my'+i+'carDiv'),"showSubCareer");
+						console.log(data.items[2]);
 					}
 				}
 			}

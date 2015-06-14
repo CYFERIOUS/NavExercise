@@ -131,10 +131,11 @@ display:none;
 .showSubCareer{
 	visibility:visible;
 	position:relative;
-	top:-300px;
+	top:-250px;
 	background-color:#FFF;
+	padding-top:25px;
 	width:100%;
-	height:auto;
+	height:50px;
 	z-index:7000;
 }
 
@@ -161,6 +162,7 @@ display:none;
 }
 
 .sideMenu{
+	
 	position:absolute;
 	display:none;
 	width:668px;
@@ -178,7 +180,8 @@ display:none;
 	background-color:#FFF;
 }
 .menues{
-	
+	padding-top:25px;
+	height:50px;
 	top:72px;
 	float:none;
 	margin-left:24px;
