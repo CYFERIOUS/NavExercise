@@ -166,8 +166,6 @@ display:none;
 	display:none;
 	width: 0px;
     height: 0px;
-    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-    transition: width 2s;
 }
 
 .sideMenuActive{
@@ -178,7 +176,31 @@ display:none;
 	width:668px;
 	height:100%;
 	background-color:#FFF;
+	animation:myMove 3s;
+	animation-duration:1s;
+	/* Firefox */
+	-moz-animation:myMove 3s;
+	-moz-animation-duration:1s;
+	/* Safari and Chrome */
+	-webkit-animation:myMove 3s;
+	-webkit-animation-duration:1s;
+	/* Opera */
+	-o-animation:myMove 3s;
+	-o-animation-duration:1s;
 	
+}
+
+@-webkit-keyframes myMove
+{
+from {width:0px;}
+to {width:668px;}
+}
+
+/* Standard syntax */
+@keyframes myMove
+{
+from {width:0px;}
+to {width:668px;}
 }
 .menues{
 	padding-top:25px;
