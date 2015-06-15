@@ -92,7 +92,6 @@ var builderModule = {
 				if(subitems == "my2sideDiv"){
 					for(var i = 0; i < data.items[2].items.length; i++) {
 						builderModule.toogle(document.getElementById('my'+i+'carDiv'),"showSubCareer");
-						console.log(data.items[2]);
 					}
 				}
 			}
@@ -103,16 +102,16 @@ var builderModule = {
 			var carDivName = 'my'+i+'carDiv';
 			carDivSide.setAttribute('id',carDivName);
 			carDivSide.setAttribute('class','subCareer');
-			carDivSide.innerHTML  = "<li>"+data.items[2].items[i].label+"</li>";
+			carDivSide.innerHTML  = data.items[2].items[i].label;
 			sideDiv.appendChild(carDivSide);
+			carDivSide.onclick = function(event){
+				window.open("http://www.dgflute.com","_blank");
+			}
 		}
-		
-			
-		
+	
 		burguerMenu.onclick = function(event){
-
-			builderModule.toogle(document.getElementById('sideMenu'),"sideMenuActive");
-			builderModule.toogle(document.getElementById('burguer'),"burguerActive");
+			builderModule.toogle(sideMenu,"sideMenuActive");
+			builderModule.toogle(burguerMenu,"burguerActive");
 		}  
   },
 };

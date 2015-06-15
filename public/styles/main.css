@@ -141,6 +141,7 @@ display:none;
 
 .showSubCareer:hover{
 	background-color:#CCC;
+	color:#EC008C;
 }
 
 .burguer{
@@ -162,22 +163,22 @@ display:none;
 }
 
 .sideMenu{
-	
-	position:absolute;
 	display:none;
-	width:668px;
-	height:100%;
-	background-color:#FFF;
-	z-index:2000;
+	width: 0px;
+    height: 0px;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
 }
 
 .sideMenuActive{
+	
 	position:absolute;
 	z-index:2000;
 	display:block;
 	width:668px;
 	height:100%;
 	background-color:#FFF;
+	
 }
 .menues{
 	padding-top:25px;
@@ -190,17 +191,18 @@ display:none;
 	
 }
 
-
-
 .menues li{
 	background: url(../images/downArrow.png) no-repeat right top;
-	/* reset styles (optional): */
 	list-style: none;
 	margin: 0;
 	padding-top: 3px;
 	padding-bottom: 3px;
 	padding-right: 0px;
 	padding-left: 10px;
+}
+
+.menues li:hover{
+	background: url(../images/upArrow.png) no-repeat right top;
 }
 
 .menues:hover{
@@ -302,9 +304,10 @@ display:none;
 	position:absolute;
 	z-index:2000;
 	display:none;
-	width:50%;
+	width:0px;
 	height:100%;
 	background-color:#FFF;
+	
 }
 
 .sideMenuActive{

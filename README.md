@@ -54,12 +54,12 @@ I DONT USE ANY LIBRARY, JUST PURE JAVASCRIPT
 #### Desktop
 
 * On hover, Primary Navigation reverses color (white/magenta). OK
-* On click, if item contains a URL, Primary Navigation navigates to a new page.ok
+* On click, if item contains a URL, Primary Navigation navigates to a new page.OK
 * On click, if item contains other items, Secondary Navigation appears (see Desktop, Secondary Navigation).OK
 * Menu appears containing Secondary Navigation.OK
-* Translucent mask appears over content, behind menu.ok
+* Translucent mask appears over content, behind menu.OK
 * On hover in, Secondary Navigation changes color (magenta/light gray).OK
-* On click, Secondary navigates to a new page.ok
+* On click, Secondary navigates to a new page.OK
 * On click outside of menu, menu and mask are hidden.OK
 
 #### Mobile
@@ -67,16 +67,16 @@ I DONT USE ANY LIBRARY, JUST PURE JAVASCRIPT
 * When a user clicks the open navigation icon (“hamburger”), the navigation should “push” from left to right.OK
 * The HUGE logo and navigation toggle slide left to right.NO
 * The open navigation icon should change to the close navigation icon (“x”).OK
-* Translucent mask appears over content, right of navigation.NO
-* The Primary Navigation should include link items and menu items.NO
+* Translucent mask appears over content, right of navigation.OK
+* The Primary Navigation should include link items and menu items.OK
 * When a user hovers a Primary Navigation item, it should change color (magenta/light gray).OK
-* When a user clicks a Primary Navigation link item, the browser should navigate to a new page.ok
-* When a user clicks a Primary Navigation menu item, the Secondary Navigation should “push” down, the chevron should rotate NO 180°.
+* When a user clicks a Primary Navigation link item, the browser should navigate to a new page.OK
+* When a user clicks a Primary Navigation menu item, the Secondary Navigation should “push” down, the chevron should rotate  180°.NO
 * When a user hovers a Secondary Navigation item, it should change color (magenta/light gray).OK
-* When a user clicks a Secondary Navigation item, browser should navigate to a new page.NO
+* When a user clicks a Secondary Navigation item, browser should navigate to a new page.OK
 * When a user clicks outside of the navigation, the navigation should close.OK
-* When the navigation closes:NO
+* When the navigation closes:
   * the menu should “pull” from right to left
   * the logo and toggle button should “slide” from right to left
-  * the close icon should change to the open icon
-  * the mask should be hidden
+  * the close icon should change to the open icon:OK
+  * the mask should be hidden:OK
