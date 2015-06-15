@@ -38,7 +38,7 @@ body, html {
 	width:9%;
 	height:auto;
 	display:none;
-	left:520px;
+	left:18%;
 	background-color:#FFF;
 }
 #careerMenu li{
@@ -115,13 +115,13 @@ display:none;
 	and (max-device-width : 768px) {
 		
 #curtain{
-position:absolute;
-z-index:1000;
-width:100%;
-height:100%;
-background-color:#000;
-opacity:0.5;
-display:none;	
+	position:absolute;
+	z-index:1000;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.5;
+	display:none;	
 }
 
 .subCareer{
@@ -164,8 +164,6 @@ display:none;
 
 .sideMenu{
 	display:none;
-	width: 0px;
-    height: 0px;
 }
 
 .sideMenuActive{
@@ -176,6 +174,7 @@ display:none;
 	width:668px;
 	height:100%;
 	background-color:#FFF;
+	
 	animation:myMove 3s;
 	animation-duration:1s;
 	/* Firefox */
@@ -189,7 +188,6 @@ display:none;
 	-o-animation-duration:1s;
 	
 }
-
 @-webkit-keyframes myMove
 {
 from {width:0px;}
@@ -274,13 +272,32 @@ to {width:668px;}
 	and (min-device-width : 0px) 
 	and (max-device-width : 320px) {
 #curtain{
-position:absolute;
-z-index:1000;
-width:100%;
-height:100%;
-background-color:#000;
-opacity:0.5;
-display:none;
+	position:absolute;
+	z-index:1000;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.5;
+	display:none;
+}
+.subCareer{
+	visibility:hidden;
+}
+
+.showSubCareer{
+	visibility:visible;
+	position:relative;
+	top:-250px;
+	background-color:#FFF;
+	padding-top:25px;
+	width:100%;
+	height:50px;
+	z-index:7000;
+}
+
+.showSubCareer:hover{
+	background-color:#CCC;
+	color:#EC008C;
 }
 .burguer{
 	position:relative;
@@ -314,8 +331,22 @@ display:none;
 
 }
 
+.menues li{
+	background: url(../images/downArrow.png) no-repeat right top;
+	list-style: none;
+	margin: 0;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	padding-left: 10px;
+}
+
+.menues li:hover{
+	background: url(../images/upArrow.png) no-repeat right top;
+}
+
 .menues:hover{
-	width:60%;
+	width:85%;
 	top:72px;
 	background-color:#EEE;
 	color:#000;
@@ -336,10 +367,34 @@ display:none;
 	position:absolute;
 	z-index:2000;
 	display:block;
-	width:668px;
+	width:320px;
 	height:100%;
 	background-color:#FFF;
+	
+	animation:myMove 3s;
+	animation-duration:1s;
+	/* Firefox */
+	-moz-animation:myMove 3s;
+	-moz-animation-duration:1s;
+	/* Safari and Chrome */
+	-webkit-animation:myMove 3s;
+	-webkit-animation-duration:1s;
+	/* Opera */
+	-o-animation:myMove 3s;
+	-o-animation-duration:1s;
 
+}
+@-webkit-keyframes myMove
+{
+from {width:0px;}
+to {width:320px;}
+}
+
+/* Standard syntax */
+@keyframes myMove
+{
+from {width:0px;}
+to {width:320px;}
 }
 #mainContainer{
 
