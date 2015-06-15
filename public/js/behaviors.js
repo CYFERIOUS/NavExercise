@@ -71,9 +71,9 @@ var builderModule = {
         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
 		curtain.style.display="none";
     }
-
+	console.log(classString);
     element.className = classString;
-	return;
+	
   },
   //mobile menu creation
   burguerMenuBehaviors:function(data){
@@ -104,6 +104,7 @@ var builderModule = {
 			carDivSide.setAttribute('class','subCareer');
 			carDivSide.innerHTML  = data.items[2].items[i].label;
 			sideDiv.appendChild(carDivSide);
+			
 			carDivSide.onclick = function(event){
 				window.open("http://www.dgflute.com","_blank");
 			}
