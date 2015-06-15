@@ -25,8 +25,8 @@ var builderModule = {
 				
 			var necesary = event.currentTarget.id;
 			if(necesary == "my2Div"){
-				document.getElementById("careerMenu").style.display="block";
-				document.getElementById("curtain").style.display="block";
+				careersMenu.style.display="block";
+				curtain.style.display="block";
 			}
 		}
 		newdiv.onclick = function(event){
@@ -52,8 +52,8 @@ var builderModule = {
   //curtain behavior
   curtainAppears:function(){
 	curtain.onclick = function(event){
-		document.getElementById("careerMenu").style.display="none";
-		document.getElementById("curtain").style.display="none";	
+		careersMenu.style.display="none";
+		curtain.style.display="none";	
 	}  
   },
   //mobile menu toogle
@@ -65,11 +65,11 @@ var builderModule = {
     var classString = element.className, nameIndex = classString.indexOf(className);
     if (nameIndex == -1) {
         classString += ' ' + className;
-		document.getElementById("curtain").style.display="block";
+		curtain.style.display="block";
     }
     else {
         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
-		document.getElementById("curtain").style.display="none";
+		curtain.style.display="none";
     }
 
     element.className = classString;
