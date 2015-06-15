@@ -113,6 +113,10 @@ body, html {
 	and (min-device-width : 320px) 
 	and (max-device-width : 768px) {
 		
+#logo img{
+	display:none;
+}
+		
 #curtain{
 	position:absolute;
 	z-index:1000;
@@ -267,6 +271,10 @@ to {width:668px;}
 @media only screen 
 	and (min-device-width : 0px) 
 	and (max-device-width : 320px) {
+		
+#logo img{
+	display:none;
+}
 #curtain{
 	position:absolute;
 	z-index:1000;
