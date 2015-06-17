@@ -81,6 +81,10 @@ var builderModule = {
   //mobile menu creation
   burguerMenuBehaviors:function(data){
 	  	
+		var copyDiv = document.createElement('div');
+		copyDiv.setAttribute('class','copy');
+		copyDiv.innerHTML = "© 2014 Huge. All Rights Reserved.";
+		
 		for(var i = 0; i < data.items.length; i++) {
 			var sideDiv = document.createElement('div');
 			var sideIdName = 'my'+i+'sideDiv';
@@ -107,7 +111,7 @@ var builderModule = {
 			carDivSide.setAttribute('class','subCareer');
 			carDivSide.innerHTML  = data.items[2].items[i].label;
 			sideDiv.appendChild(carDivSide);
-			
+			sideDiv.appendChild(copyDiv);
 			carDivSide.onclick = function(event){
 				window.open("http://www.dgflute.com","_blank");
 			}

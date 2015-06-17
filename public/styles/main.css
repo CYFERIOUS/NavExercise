@@ -19,6 +19,12 @@ body, html {
 	font-family:HUGEAvantGardeBold;
 	font-size:130px;
 	color:#FFF;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 #menu{
 	font-family:HUGEAvantGardeBold;
@@ -30,22 +36,21 @@ body, html {
 	color:#FFF;
 }
 #careerMenu{
-	font-family:Galaxie;
 	position:absolute;
 	z-index:2000;
-	width:9%;
+	width:10%;
 	height:auto;
 	display:none;
 	left:25%;
 	padding:20px;
 	background-color:#FFF;
+	font-family:Galaxie;
 }
 #careerMenu li{
 	background-color:#FFF;
 }
 .menues{
 	position:relative;
-	font-family:HUGEAvantGardeBold;
 	top:0px;
 	height:52px;
 	float:left;
@@ -115,6 +120,10 @@ body, html {
 @media only screen 
 	and (min-device-width : 320px) 
 	and (max-device-width : 768px) {
+		
+.copy{
+	font-family:Arial, Helvetica, sans-serif;
+}
 		
 #logo img{
 	display:none;
@@ -274,6 +283,11 @@ to {width:668px;}
 @media only screen 
 	and (min-device-width : 0px) 
 	and (max-device-width : 320px) {
+
+.copy{
+	font-size:9px;
+	font-family:Arial, Helvetica, sans-serif;
+}
 		
 #logo img{
 	display:none;
@@ -329,7 +343,7 @@ to {width:668px;}
 	padding-left:24px;
 }
 .menues{
-	
+
 	top:72px;
 	float:none;
 	margin-left:24px;
