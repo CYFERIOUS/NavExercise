@@ -36,7 +36,8 @@ body, html {
 	width:9%;
 	height:auto;
 	display:none;
-	left:21%;
+	left:25%;
+	padding:20px;
 	background-color:#FFF;
 }
 #careerMenu li{
@@ -51,6 +52,8 @@ body, html {
 	margin-left:24px;
 	margin-right:24px;
 	padding-top:20px;
+	padding-left:10px;
+	padding-right:10px;
 	cursor:pointer;
 }
 

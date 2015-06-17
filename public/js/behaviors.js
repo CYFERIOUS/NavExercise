@@ -27,6 +27,9 @@ var builderModule = {
 			if(necesary == "my2Div"){
 				careersMenu.style.display="block";
 				curtain.style.display="block";
+			}else{
+				careersMenu.style.display="none";
+				curtain.style.display="none";
 			}
 		}
 		newdiv.onclick = function(event){
