@@ -74,7 +74,8 @@ var builderModule = {
         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
 		curtain.style.display="none";
     }
-	console.log(classString);
+	//console.log(classString);
+	
     element.className = classString;
 	
   },
@@ -84,6 +85,9 @@ var builderModule = {
 		var copyDiv = document.createElement('div');
 		copyDiv.setAttribute('class','copy');
 		copyDiv.innerHTML = "© 2014 Huge. All Rights Reserved.";
+		
+		var auxDivBelow = document.createElement('div');
+		auxDivBelow.setAttribute('class','belowSubCareer');
 		
 		for(var i = 0; i < data.items.length; i++) {
 			var sideDiv = document.createElement('div');
@@ -97,9 +101,14 @@ var builderModule = {
 			sideDiv.onclick = function(event){
 				var subitems = event.currentTarget.id;
 				if(subitems == "my2sideDiv"){
+					for(var i = 3; i < data.items.length; i++) {
+						builderModule.toogle(document.getElementById('my'+i+'sideDiv'),"belowSubCareer");
+						
+					}
 					for(var i = 0; i < data.items[2].items.length; i++) {
 						builderModule.toogle(document.getElementById('my'+i+'carDiv'),"showSubCareer");
 					}
+					
 				}
 			}
 		}
@@ -109,18 +118,19 @@ var builderModule = {
 			var carDivName = 'my'+i+'carDiv';
 			carDivSide.setAttribute('id',carDivName);
 			carDivSide.setAttribute('class','subCareer');
-			carDivSide.innerHTML  = data.items[2].items[i].label;
+			carDivSide.innerHTML  = "<li>"+data.items[2].items[i].label+"</li>";
 			sideDiv.appendChild(carDivSide);
-			sideDiv.appendChild(copyDiv);
 			carDivSide.onclick = function(event){
 				window.open("http://www.dgflute.com","_blank");
 			}
 		}
-	
+		
 		burguerMenu.onclick = function(event){
 			builderModule.toogle(sideMenu,"sideMenuActive");
 			builderModule.toogle(burguerMenu,"burguerActive");
-		}  
+		} 
+		 
+		sideDiv.appendChild(copyDiv);
   },
 };
 
