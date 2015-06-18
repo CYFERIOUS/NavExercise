@@ -151,7 +151,7 @@ body, html {
   .showSubCareer{
 	  visibility:visible;
 	  position:relative;
-	  top:-880px;
+	  top:-877px;
 	  background-color:#FFF;
 	  padding-top:25px;
 	  width:100%;
@@ -164,6 +164,31 @@ body, html {
 	position:absolute;
 	background-color: #FFF;
 	top: 600px;
+	
+	animation:moveDown 3s;
+	animation-duration:1s;
+	/* Firefox */
+	-moz-animation:moveDown 3s;
+	-moz-animation-duration:1s;
+	/* Safari and Chrome */
+	-webkit-animation:moveDown 3s;
+	-webkit-animation-duration:1s;
+	/* Opera */
+	-o-animation:moveDown 3s;
+	-o-animation-duration:1s;	
+  }
+  
+   @-webkit-keyframes moveDown
+  {
+	  from {top:0px; opacity:0;}
+	  to {top:600px; opacity:1;}
+  }
+  
+  /* Standard syntax */
+  @keyframes moveDown
+  {
+	  from {top:0px; opacity:0;}
+	  to {top:600px; opacity:1;}
   }
   
   .showSubCareer:hover{
@@ -325,7 +350,7 @@ body, html {
     .showSubCareer{
 	  visibility:visible;
 	  position:relative;
-	  top:-859px;
+	  top:-890px;
 	  background-color:#FFF;
 	  padding-top:25px;
 	  width:100%;
@@ -338,6 +363,31 @@ body, html {
 	position:absolute;
 	background-color: #FFF;
 	top: 630px;
+	
+	animation:moveDown 3s;
+	animation-duration:1s;
+	/* Firefox */
+	-moz-animation:moveDown 3s;
+	-moz-animation-duration:1s;
+	/* Safari and Chrome */
+	-webkit-animation:moveDown 3s;
+	-webkit-animation-duration:1s;
+	/* Opera */
+	-o-animation:moveDown 3s;
+	-o-animation-duration:1s;
+  }
+  
+  @-webkit-keyframes moveDown
+  {
+	  from {top:0px; opacity:0;}
+	  to {top:630px; opacity:1;}
+  }
+  
+  /* Standard syntax */
+  @keyframes moveDown
+  {
+	  from {top:0px; opacity:0;}
+	  to {top:630px; opacity:1;}
   }
   
   .showSubCareer:hover{
