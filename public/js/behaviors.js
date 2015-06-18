@@ -5,6 +5,7 @@
 	var mainMenu = document.getElementById("menu");
 	var auxMenu = document.getElementById("auxMenu");
 	var sideMenu = document.getElementById("sideMenu");
+	var falseMenu = document.getElementById("falseMenu");
   
 	var burguerMenu = document.getElementById("burguer");
 	var curtain = document.getElementById("curtain");
@@ -74,10 +75,8 @@ var builderModule = {
         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
 		curtain.style.display="none";
     }
-	//console.log(classString);
-	
+	console.log(classString);
     element.className = classString;
-	
   },
   //mobile menu creation
   burguerMenuBehaviors:function(data){
@@ -85,9 +84,6 @@ var builderModule = {
 		var copyDiv = document.createElement('div');
 		copyDiv.setAttribute('class','copy');
 		copyDiv.innerHTML = "© 2014 Huge. All Rights Reserved.";
-		
-		var auxDivBelow = document.createElement('div');
-		auxDivBelow.setAttribute('class','belowSubCareer');
 		
 		for(var i = 0; i < data.items.length; i++) {
 			var sideDiv = document.createElement('div');
@@ -97,18 +93,15 @@ var builderModule = {
 			sideDiv.innerHTML  = "<li>"+data.items[i].label+"</li>";
 			sideMenu.appendChild(sideDiv);
 			sideDiv.style.visibility= 'visible';
-			
 			sideDiv.onclick = function(event){
 				var subitems = event.currentTarget.id;
 				if(subitems == "my2sideDiv"){
 					for(var i = 3; i < data.items.length; i++) {
 						builderModule.toogle(document.getElementById('my'+i+'sideDiv'),"belowSubCareer");
-						
 					}
 					for(var i = 0; i < data.items[2].items.length; i++) {
 						builderModule.toogle(document.getElementById('my'+i+'carDiv'),"showSubCareer");
 					}
-					
 				}
 			}
 		}
@@ -128,6 +121,7 @@ var builderModule = {
 		burguerMenu.onclick = function(event){
 			builderModule.toogle(sideMenu,"sideMenuActive");
 			builderModule.toogle(burguerMenu,"burguerActive");
+			builderModule.toogle(falseMenu,"gobackMenu");
 		} 
 		 
 		sideDiv.appendChild(copyDiv);
