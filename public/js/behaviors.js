@@ -10,6 +10,8 @@
 	var burguerMenu = document.getElementById("burguer");
 	var curtain = document.getElementById("curtain");
 	
+	
+	
 var builderModule = {
 	
  	// build main menu
@@ -74,10 +76,27 @@ var builderModule = {
     else {
         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
 		curtain.style.display="none";
+		builderModule.animationMenu(falseMenu);
+
     }
 	console.log(classString);
     element.className = classString;
   },
+  
+  animationMenu:function(elem){
+	  
+  var width = 320;
+
+  function frame() {
+    width--;
+	elem.style.display = "block";
+    elem.style.width = width + 'px';
+    if (width == 0) 
+      clearInterval(id);
+  	}
+  var id = setInterval(frame, 1);
+  },
+  
   //mobile menu creation
   burguerMenuBehaviors:function(data){
 	  	
@@ -121,10 +140,9 @@ var builderModule = {
 		burguerMenu.onclick = function(event){
 			builderModule.toogle(sideMenu,"sideMenuActive");
 			builderModule.toogle(burguerMenu,"burguerActive");
-			builderModule.toogle(falseMenu,"gobackMenu");
 		} 
 		 
-		sideDiv.appendChild(copyDiv);
+		
   },
 };
 

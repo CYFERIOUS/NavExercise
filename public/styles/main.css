@@ -230,7 +230,6 @@ body, html {
 	  width:650px;
 	  height:100%;
 	  background-color:#FFF;
-	  opacity:0.5;
 	  font-family:HUGEAvantGardeBold;
 	  
 	  animation:myMove 3s;
@@ -262,35 +261,13 @@ body, html {
   #falseMenu{
 	position:absolute;
 	top:72px;
-	display:block;
+	display:none;
 	width:650px;
 	height:100%;
+	background-color:#FFF;
+	z-index:8000;
   }
-  .gobackMenu{
-	  background-color:#FFF;
-	  animation:goBack 3s;
-	  animation-duration:3s;
-	  /* Firefox */
-	  -moz-animation:goBack 3s;
-	  -moz-animation-duration:3s;
-	  /* Safari and Chrome */
-	  -webkit-animation:goBack 3s;
-	  -webkit-animation-duration:3s;
-	  /* Opera */
-	  -o-animation:goBack 3s;
-	  -o-animation-duration:3s;*/	
-  }
-  @-webkit-keyframes goBack
-  {
-	  from {width:650px; opacity:1;}
-	  to {width:0px; opacity:0;}
-  }
-  /* Standard syntax */
-  @keyframes goBack
-  {
-	  from {width:650px; opacity:1;}
-	  to {width:0px; opacity:0;}
-  }
+ 
   
   .menues{
 	  position:relative;
@@ -335,7 +312,7 @@ body, html {
   
   #title{
 	  text-align:left;
-	  left:24px;
+	  left:25px;
 	  position:relative;
 	  top:320px;;
 	  font-family:HUGEAvantGardeBold;
@@ -352,8 +329,8 @@ body, html {
 	  height:auto;
 	  overflow:auto;
 	  text-align:justify;
-	  left:5px;
-	  margin:5px;
+	  left:21px;
+	  margin:3px;
   }
 
 }
@@ -523,6 +500,17 @@ body, html {
 	  from {width:0px;}
 	  to {width:320px;}
   }
+  
+  #falseMenu{
+	position:absolute;
+	top:72px;
+	display:none;
+	width:320px;
+	height:100%;
+	background-color:#FFF;
+	z-index:8000;
+  }
+  
   #mainContainer{
   
 	  width:340px;
@@ -535,7 +523,7 @@ body, html {
   }
   
   #title{
-	  left:10px;
+	  left:24px;
 	  position:relative;
 	  top:110%;
 	  font-family:HUGEAvantGardeBold;
@@ -554,7 +542,7 @@ body, html {
 	  height:auto;
 	  overflow:auto;
 	  text-align:justify;
-	  left:0%;
+	  left:21px;
 	  margin:3px;
   }
 
