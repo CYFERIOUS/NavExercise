@@ -277,28 +277,22 @@ body, html {
 	  margin-left:10px;
 	  color:#000;
 	  visibility:hidden;
+	  background: url(../images/downArrow.png) no-repeat right center;
+	
   }
   
-  .menues li{
-	  background: url(../images/downArrow.png) no-repeat right top;
-	  list-style: none;
-	  margin: 0;
-	  padding-top: 3px;
-	  padding-bottom: 3px;
-	  padding-right: 10px;
-	  padding-left: 0px;
-  }
-  
-  .menues li:hover{
-	  background: url(../images/upArrow.png) no-repeat right top;
-  }
-  
-  .menues:hover{
-	  width:93%;
+   .menues:hover{
+	 
 	  background-color:#EEE;
 	  color:#000;
+	  margin-left:10px;
 	  cursor:pointer;
   }
+  
+  .menuesLiOver{
+	   background: url(../images/upArrow.png) no-repeat right center;
+  }
+  
   
   #mainContainer{
 	  width:100%;
@@ -440,6 +434,11 @@ body, html {
 	  color:#000;
 	  visibility:hidden;
   }
+  .menues:hover{
+	  background-color:#EEE;
+	  color:#000;
+	  cursor:pointer;
+  }
   
   .menues li{
 	  background: url(../images/downArrow.png) no-repeat right top;
@@ -453,13 +452,6 @@ body, html {
   
   .menues li:hover{
 	  background: url(../images/upArrow.png) no-repeat right top;
-  }
-  
-  .menues:hover{
-	  width:85%;
-	  background-color:#EEE;
-	  color:#000;
-	  cursor:pointer;
   }
   
   .sideMenu{

@@ -93,10 +93,11 @@ var builderModule = {
     }
     else {
         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+			
     }
     element.className = classString;
   },
-  
+  //fake animation side menu
   animationMenu:function(elem){
 	  
   var width = 320;
@@ -135,6 +136,7 @@ var builderModule = {
 					for(var i = 0; i < data.items[2].items.length; i++) {
 						builderModule.toogleLevelTwo(document.getElementById('my'+i+'carDiv'),"showSubCareer");
 					}
+					builderModule.toogleLevelTwo(document.getElementById('my2sideDiv'),"menuesLiOver");
 				}
 			}
 		}
