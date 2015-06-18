@@ -65,18 +65,18 @@ I DONT USE ANY LIBRARY, JUST PURE JAVASCRIPT
 #### Mobile
 
 * When a user clicks the open navigation icon (“hamburger”), the navigation should “push” from left to right.OK
-* The HUGE logo and navigation toggle slide left to right.NO
+* The HUGE logo and navigation toggle slide left to right.OK
 * The open navigation icon should change to the close navigation icon (“x”).OK
 * Translucent mask appears over content, right of navigation.OK
 * The Primary Navigation should include link items and menu items.OK
 * When a user hovers a Primary Navigation item, it should change color (magenta/light gray).OK
 * When a user clicks a Primary Navigation link item, the browser should navigate to a new page.OK
-* When a user clicks a Primary Navigation menu item, the Secondary Navigation should “push” down, the chevron should rotate  180°.NO
+* When a user clicks a Primary Navigation menu item, the Secondary Navigation should “push” down, the chevron should rotate  180°.OK
 * When a user hovers a Secondary Navigation item, it should change color (magenta/light gray).OK
 * When a user clicks a Secondary Navigation item, browser should navigate to a new page.OK
 * When a user clicks outside of the navigation, the navigation should close.OK
 * When the navigation closes:
-  * the menu should “pull” from right to left
-  * the logo and toggle button should “slide” from right to left
+  * the menu should “pull” from right to left OK
+  * the logo and toggle button should “slide” from right to left (i dont understand it)
   * the close icon should change to the open icon:OK
   * the mask should be hidden:OK

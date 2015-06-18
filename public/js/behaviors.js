@@ -63,7 +63,7 @@ var builderModule = {
 	}  
   },
   //mobile menu toogle
-  toogle:function(element, className){ 	
+  toogleLevelOne:function(element, className){ 	
 	
     if (!element || !className){
         return;
@@ -79,7 +79,21 @@ var builderModule = {
 		builderModule.animationMenu(falseMenu);
 
     }
-	console.log(classString);
+    element.className = classString;
+  },
+  
+  toogleLevelTwo:function(element, className){ 	
+	
+    if (!element || !className){
+        return;
+    }
+    var classString = element.className, nameIndex = classString.indexOf(className);
+    if (nameIndex == -1) {
+        classString += ' ' + className;
+    }
+    else {
+        classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+    }
     element.className = classString;
   },
   
@@ -116,10 +130,10 @@ var builderModule = {
 				var subitems = event.currentTarget.id;
 				if(subitems == "my2sideDiv"){
 					for(var i = 3; i < data.items.length; i++) {
-						builderModule.toogle(document.getElementById('my'+i+'sideDiv'),"belowSubCareer");
+						builderModule.toogleLevelTwo(document.getElementById('my'+i+'sideDiv'),"belowSubCareer");
 					}
 					for(var i = 0; i < data.items[2].items.length; i++) {
-						builderModule.toogle(document.getElementById('my'+i+'carDiv'),"showSubCareer");
+						builderModule.toogleLevelTwo(document.getElementById('my'+i+'carDiv'),"showSubCareer");
 					}
 				}
 			}
@@ -138,8 +152,8 @@ var builderModule = {
 		}
 		
 		burguerMenu.onclick = function(event){
-			builderModule.toogle(sideMenu,"sideMenuActive");
-			builderModule.toogle(burguerMenu,"burguerActive");
+			builderModule.toogleLevelOne(sideMenu,"sideMenuActive");
+			builderModule.toogleLevelOne(burguerMenu,"burguerActive");
 		} 
 		 
 		
